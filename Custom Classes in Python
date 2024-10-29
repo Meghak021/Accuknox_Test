@@ -1,0 +1,27 @@
+Task: Implementing a Rectangle Class
+The Rectangle class should allow instances to be initialized with length and width, and should support iteration to yield length and width in a specific format.
+
+Code Snippet:
+class Rectangle:
+    def __init__(self, length: int, width: int):
+        self.length = length
+        self.width = width
+
+    def __iter__(self):
+        yield {"length": self.length}
+        yield {"width": self.width}
+
+# Testing the Rectangle class
+rectangle = Rectangle(5, 10)
+for dimension in rectangle:
+    print(dimension)
+
+Output:
+{'length': 5}
+{'width': 10}
+
+This class meets the requirements:
+
+1.Initializes with length and width.
+2.Supports iteration over instances.
+3.Produces the required output format when iterated.
